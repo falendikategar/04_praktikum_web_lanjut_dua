@@ -14,10 +14,11 @@
 
     <!-- Main content -->
     <section class="content">
+
+        @foreach ($data as $item)
+
         <!-- Default box -->
         <div class="card">
-
-            @foreach ($data as $item)
 
             <div class="card-header">
                 <h3 class="card-title">{{ $item->title }}</h3>
@@ -36,10 +37,10 @@
             <!-- /.card-body -->
             <!-- /.card-footer-->
 
-            @endforeach
-
         </div>
         <!-- /.card -->
+
+        @endforeach
 
     </section>
     <!-- /.content -->

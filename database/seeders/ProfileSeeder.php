@@ -20,5 +20,13 @@ class ProfileSeeder extends Seeder
             'kelas' => 'TI-2H',
             'absen' => '08'
         ]);
+
+        DB::table('profile')->insert([
+            'image' => asset ('04_praktikum_web_lanjut_dua/public/assets/dist/img/avatar5.png'),
+            'nama' => 'Rocky Kurniawan',
+            'nim' => '2141721010',
+            'kelas' => 'TI-2J',
+            'absen' => '24'
+        ]);
     }
 }

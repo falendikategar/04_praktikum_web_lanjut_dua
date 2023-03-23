@@ -15,7 +15,12 @@ class HomepageSeeder extends Seeder
     {
         DB::table('homepage')->insert([
             'title' => 'Falendika Tegar Pratama | 2H-D4 Teknik Informatika',
-            'content' => 'Selamat Datang Di Halaman Dashboard.'
+            'content' => 'Selamat Datang Falendika Tegar Pratama'
+        ]);
+
+        DB::table('homepage')->insert([
+            'title' => 'Rocky Kurniawan | 2J-D4 Teknik Informatika',
+            'content' => 'Selamat Datang Rocky Kurniawan'
         ]);
     }
 }

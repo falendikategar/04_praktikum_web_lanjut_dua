@@ -21,11 +21,12 @@
 
 <!-- Main content -->
 <section class="content">
+
+    @foreach ($data as $item)
+
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-
-            @foreach ($data as $item)
 
             <h2 class="card-title">{{ $item->title }}</h2>
                 <div class="card-tools">
@@ -44,39 +45,13 @@
             <!-- /.card-body -->
             <!-- /.card-footer-->
 
-            @endforeach
-
         </div>
         <!-- /.card -->
 
-        <div class="card">
-            <div class="card-header">
+    @endforeach
 
-                @foreach ($data as $item)
-
-                <h2 class="card-title">{{ $item->title }}</h2>
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    {{ $item->content }}
-                </div>
-                <!-- /.card-body -->
-                <!-- /.card-footer-->
-
-                @endforeach
-
-            </div>
-            <!-- /.card -->
-    </section>
-    <!-- /.content -->
+</section>
+<!-- /.content -->
 @endsection
 @push('custom_js')
 <script>

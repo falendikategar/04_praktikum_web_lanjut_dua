@@ -13,14 +13,15 @@
     </section>
     <!-- Main content -->
     <section class="content">
-            <div class="card card-primary col-md-5 mx-auto card-outline">
 
-                @foreach ($data as $item)
+            @foreach ($data as $item)
+
+            <div class="card card-primary col-md-5 mx-auto card-outline">
 
                 <div class="card-body box-profile">
                     <div class="text-center">
                         <img class="profile-user-img img-fluid img-circle"
-                        src="{{ asset ('assets/dist/img/falen.jpg') }}" alt="User profile picture">
+                        src="{{ $item->image }}" alt="User profile picture">
                     </div>
 
                     <h3 class="profile-username text-center">{{ $item->nama }}</h3>
@@ -40,9 +41,10 @@
                 <!-- /.card-body -->
                 <!-- /.card-footer-->
 
-                @endforeach
-
              </div>
+
+             @endforeach
+
              <!-- /.card -->
             </div>
         </section>
